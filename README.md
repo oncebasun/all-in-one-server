@@ -11,6 +11,23 @@ Recourses and notes of building All-in-One Server
 ## TrueNAS Core
 ### Installation
 ### Fresh Setup
+#### Test Disk Speed
+- Create a dataset in the pool with SMB and no compression
+
+```
+# Sequential write
+fio --direct=1 --iodepth=16 --thread --rw=write --ioengine=psync --bs=128k --size=2G --numjobs=30 --group_reporting --name=seqwrite
+
+# Sequential read
+fio --direct=1 --iodepth=16 --thread --rw=read --ioengine=psync --bs=128k --size=2G --numjobs=30 --group_reporting --name=seqread
+
+# Random write
+fio --direct=1 --iodepth=16 --thread --rw=randwrite --ioengine=psync --bs=128k --size=2G --numjobs=30 --group_reporting --name=randwrite
+
+# Random read
+fio --direct=1 --iodepth=16 --thread --rw=randread --ioengine=psync --bs=128k --size=2G --numjobs=30 --group_reporting --name=randread
+```
+
 #### Test Tasks
 - **Scrub:** Every 1st and 15th of the month at 4 am. The threshold on 10 days.
 - **Short S.M.A.R.T:** Every 5th, 12th, 19th and 26th of the month at 3 am.
@@ -21,3 +38,4 @@ Recourses and notes of building All-in-One Server
 - https://www.reddit.com/r/openwrt/comments/199b2qh/openwrt_over_proxmox_in_a_mini_pc_ryzen_5/
 - https://theramblingtech.com/setup-proxmox8/
 - https://foxi.buduanwang.vip/virtualization/1754.html/
+- https://halysl.github.io/2020/05/12/fio%E6%B5%8B%E8%AF%95%E7%A3%81%E7%9B%98%E6%80%A7%E8%83%BD/
