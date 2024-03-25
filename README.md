@@ -13,7 +13,7 @@ Recourses and notes of building All-in-One Server
 ### Fresh Setup
 #### Test Disk Speed
 - Create a dataset in the pool with SMB and no compression
-
+- `cd` into the dataset and use the following command to do speed tests:
 ```
 # Sequential write
 fio --direct=1 --iodepth=16 --thread --rw=write --ioengine=psync --bs=128k --size=2G --numjobs=30 --group_reporting --name=seqwrite
