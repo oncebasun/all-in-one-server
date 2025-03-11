@@ -7,7 +7,6 @@ Recourses and notes of building All-in-One Server
 - Memory: [TEAMGROUP Elite SODIMM DDR5 32GB 5600Mhz (PC5-44800) CL46 Non-ECC Unbuffered 1.1V 262 Pin Laptop Memory Module Ram - TED532G5600C46A-S01](https://www.amazon.com/dp/B0CRB5MPL4?ref=ppx_yo2ov_dt_b_product_details&th=1)
 
 
-
 ## TrueNAS Core
 ### Installation
 ### Fresh Setup
@@ -33,7 +32,11 @@ fio --direct=1 --iodepth=16 --thread --rw=randread --ioengine=psync --bs=128k --
 - **Short S.M.A.R.T:** Every 5th, 12th, 19th and 26th of the month at 3 am.
 - **Long S.M.A.R.T:** Every 8th and 22nd at 4 am.
 
-### References
+
+## OpenVPN Client
+
+
+## References
 - https://vicfree.com/2023/01/truenas-setup-guide/
 - https://www.reddit.com/r/openwrt/comments/199b2qh/openwrt_over_proxmox_in_a_mini_pc_ryzen_5/
 - https://theramblingtech.com/setup-proxmox8/
