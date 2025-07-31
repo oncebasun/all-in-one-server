@@ -44,3 +44,5 @@ fio --direct=1 --iodepth=16 --thread --rw=randread --ioengine=psync --bs=128k --
 - https://halysl.github.io/2020/05/12/fio%E6%B5%8B%E8%AF%95%E7%A3%81%E7%9B%98%E6%80%A7%E8%83%BD/
 - https://blog.konpat.me/dev/2019/03/11/setting-up-lxc-for-intel-gpu-proxmox.html
 - https://pve.proxmox.com/wiki/OpenVPN_in_LXC
+- https://community-scripts.github.io/ProxmoxVE/scripts?id=plex
+- https://www.reddit.com/r/homelab/comments/1b0ous4/experience_using_plex_in_lxc_on_proxmox/
